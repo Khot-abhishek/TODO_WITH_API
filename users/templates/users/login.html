@@ -1,0 +1,17 @@
+{% extends "todos/base.html" %}
+{% load crispy_forms_tags %}
+{% block main %}
+
+    <div class="container mt-2">
+
+        <form class="card p-2 mt-2" method="post">
+            {% csrf_token %}
+
+            {{form | crispy}}
+
+            <input class="btn btn-primary" type="submit" value="Login">
+        </form>
+        <span class="pt-2">Need a new Account?</span><a class="ps-2" href="{% url 'register' %}">SignUp</a>
+    </div>
+
+{% endblock main %}  

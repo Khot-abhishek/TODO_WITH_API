@@ -18,7 +18,7 @@ a{
 .frame{
     box-sizing: border-box;
     max-width: 600px;
-    max-height: 600px;
+    /* max-height: 800px; */
     min-height: 65vh;
     width: 100%;
     padding: 1rem;

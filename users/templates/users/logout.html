@@ -1,0 +1,13 @@
+{% extends "todos/base.html" %}
+{% load crispy_forms_tags %}
+{% block main %}
+
+    <div class="container mt-2">
+
+        <h3>You have successfully logged out </h3><a class="ps-2" href="{% url 'register' %}">Login?</a>
+        <br>
+        <span class="pt-2">Need a new Account?</span><a class="ps-2" href="{% url 'register' %}">SignUp</a>
+
+    </div>
+
+{% endblock main %}  
