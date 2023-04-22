@@ -1,0 +1,18 @@
+{% extends 'todos/base.html' %}
+
+{% block title %}  Create Task page  {% endblock title %}
+
+
+{% block main %}
+
+    <h3>New task</h3>
+    <form  method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <input type="submit" value="Add">
+    </form>
+   
+
+{% endblock main %}

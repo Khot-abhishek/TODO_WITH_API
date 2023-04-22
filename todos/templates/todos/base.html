@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todos/base_style.css' %}">
+    <link rel="stylesheet" href="{% static 'todos/task_list.css' %}">
+    <link rel="stylesheet" href="{% static 'todos/task_form.css' %}">
+    <title>
+        {% block title %} {% endblock title %}
+    </title>
+</head>
+<body>
+
+    <div class="frame">
+        <div class="upper-box">
+            <div class="block-one">
+                <a href="{% url 'task_list' %}">Go Back</a>
+                <a style="color: black;">{{request.user.username}}</a>
+            </div>
+            <div class="block-two">Wonder List</div>
+            <div class="block-three">
+                <a href="">Login/signup</a>
+            </div>
+        </div>
+
+        <div class="lower-box">
+            {% block main %}
+
+            {% endblock main %}
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>

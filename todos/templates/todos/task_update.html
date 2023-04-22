@@ -1,0 +1,27 @@
+{% extends 'todos/base.html' %}
+
+{% block title %}   Task Upadate  {% endblock title %}
+
+
+{% block main %}
+    
+    <form  method="post">
+        {% csrf_token %}
+
+        <div class="form-block">
+            <label class="form-label" for="id_title">{{form.title.label}}</label>
+            {{form.title}}
+        </div>
+        <div class="form-block">
+            <label class="form-label" for="id_title">{{form.description.label}}</label>
+            {{form.description}}
+        </div>
+        <div class="form-block">
+            <label class="form-label" for="id_title">{{form.completed.label}}</label>
+            {{form.completed}}
+        </div>
+
+        <input class="submit-btn" type="submit" value="Update">
+    </form>
+
+{% endblock main %}

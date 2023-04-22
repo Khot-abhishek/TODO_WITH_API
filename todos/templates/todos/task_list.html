@@ -1,0 +1,23 @@
+{% extends 'todos/base.html' %}
+
+{% block title %}   Task List  {% endblock title %}
+
+
+{% block main %}
+    <div class="add-button">
+        <a href="{% url 'task_create' %}">Add New Task</a>
+    </div>
+
+    <div class="all-tasks">
+        {% for task in task_list %}
+        
+            <div class="task">
+                <a class="task-title" href="{% url 'task_update' task.id %}">{{task.title}}</a>
+                <a class="task-delete" href="{% url 'task_delete' task.id %}">Delete</a>    
+            </div>
+
+        {% endfor %}    
+        
+    </div>
+
+{% endblock main %}
