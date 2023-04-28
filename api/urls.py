@@ -10,5 +10,6 @@ urlpatterns = [
     path('create/', views.create_task, name='api_create_task'),
     path('delete/<int:pk>/', views.delete_task, name='api_delete_task'),
     path('update/<int:pk>/', views.update_task, name='api_update_task'),
+    path('completed/<int:pk>/', views.completed, name='api_completed_task'),
 
 ]
